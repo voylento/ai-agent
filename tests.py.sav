@@ -1,0 +1,50 @@
+import unittest
+import tempfile
+import os
+from pathlib import Path
+
+from functions.functions import (
+        write_file,
+    )
+
+class TestWriteFile(unittest.TestCase):
+    
+    def test_file_none(self):
+        """Test that passing "" as file_path equates returns error"""
+
+        expected = 'Error: File not found or is not a regular file: ""'
+
+        actual = write_file("calculator", "", "some content")
+
+        print(actual)
+
+        self.assertTrue(expected == actual)
+
+    def test_file_in_working_directory(self):
+        """Test that writing to a file in the working directory is successful"""
+
+        content = "wait, this isn't lorem ipsum"
+
+        expected = f"Successfully wrote to \"lorem.txt\" ({len(content)} characters written)"
+
+        actual = write_file("calculator", "lorem.txt", content) 
+
+        print(actual)
+
+        self.assertTrue(expected ==  actual)
+
+    def test_file_in_sub_directory(self):
+        """Test that writing to a file in a subdirectory is successful"""
+
+        content = "lorem ipsum dolor sit amet"
+
+        expected = f'Successfully wrote to "pkg/morelorem.txt" ({len(content)} characters written)'
+
+        actual = write_file("calculator", "pkg/morelorem.txt", content) 
+
+        print(actual)
+
+        self.assertTrue(expected == actual)
+
+if __name__ == '__main__':
+    unittest.main()
