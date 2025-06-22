@@ -1,5 +1,6 @@
 import os
 import sys
+from pprint import pp
 
 from dotenv import load_dotenv
 from google import genai
@@ -68,7 +69,7 @@ def main():
                 )
 
             if not response.function_calls:
-                print(f"{response.text}")
+                pp(response.text)
                 return response.text
 
             for func_call in response.function_calls:
