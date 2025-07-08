@@ -1,6 +1,6 @@
 # AI-AGENT
 
- This is a toy ai-agent that uses Google's gemini based on the "ai-agent" project from boot.dev
+ This is the code I developed from a guided project on [Boot.dev](https://www.boot.dev/courses/build-ai-agent-python). The course guides the student to create an AI agent that uses Google's Gemini. It was a fun course to do and gave me a small view into some of what goes into creating an AI agent. 
 
 ## To Run
 
