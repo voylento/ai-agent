@@ -1,6 +1,6 @@
 # AI-AGENT
 
-## This is a toy ai-agent that uses Google's gemini based on the "ai-agent" project from boot.dev
+ This is a toy ai-agent that uses Google's gemini based on the "ai-agent" project from boot.dev
 
 ## To Run
 
